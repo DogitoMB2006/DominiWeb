@@ -95,8 +95,8 @@ export default function Catalogo() {
     : projects.filter(project => project.category === activeFilter)
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-16 transition-colors">
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-800 dark:to-purple-800 text-white py-16">
+    <div className="min-h-screen bg-gray-50 pt-16">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -109,7 +109,7 @@ export default function Catalogo() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50 dark:bg-gray-900">
+      <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             {categories.map((category) => (
@@ -119,7 +119,7 @@ export default function Catalogo() {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeFilter === category.id
                     ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 shadow-md'
+                    : 'bg-white text-gray-700 hover:bg-blue-50 shadow-md'
                 }`}
               >
                 {category.name} ({category.count})
@@ -134,14 +134,14 @@ export default function Catalogo() {
                 title={project.title}
                 description={project.description}
                 image={project.image}
-                className="hover:transform hover:scale-105 transition-all duration-300 bg-white dark:bg-gray-800"
+                className="hover:transform hover:scale-105 transition-all duration-300"
               >
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Tecnologías:</h4>
+                    <h4 className="font-semibold text-gray-800 mb-2">Tecnologías:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, index) => (
-                        <span key={index} className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
+                        <span key={index} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
                           {tech}
                         </span>
                       ))}
@@ -149,10 +149,10 @@ export default function Catalogo() {
                   </div>
                   
                   <div>
-                    <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Características:</h4>
+                    <h4 className="font-semibold text-gray-800 mb-2">Características:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.features.map((feature, index) => (
-                        <span key={index} className="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-1 rounded-full">
+                        <span key={index} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
                           {feature}
                         </span>
                       ))}
@@ -160,10 +160,10 @@ export default function Catalogo() {
                   </div>
                   
                   <div className="flex gap-2 pt-2">
-                    <button className="flex-1 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white py-2 px-4 rounded-lg font-medium transition-colors">
+                    <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors">
                       Ver Demo
                     </button>
-                    <button className="flex-1 border border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 py-2 px-4 rounded-lg font-medium transition-colors">
+                    <button className="flex-1 border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white py-2 px-4 rounded-lg font-medium transition-colors">
                       Más Info
                     </button>
                   </div>
@@ -174,20 +174,20 @@ export default function Catalogo() {
         </div>
       </section>
 
-      <section className="bg-white dark:bg-gray-800 py-16">
+      <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               ¿Tienes un Proyecto en Mente?
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Contáctanos para discutir tu proyecto y obtener una cotización personalizada
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
                 Solicitar Cotización
               </button>
-              <button className="border-2 border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
                 Ver Más Proyectos
               </button>
             </div>
@@ -195,48 +195,48 @@ export default function Catalogo() {
         </div>
       </section>
 
-      <section className="bg-gray-100 dark:bg-gray-900 py-16">
+      <section className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               Nuestro Proceso de Desarrollo
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+            <p className="text-xl text-gray-600">
               Seguimos una metodología probada para garantizar el éxito de tu proyecto
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="bg-blue-600 dark:bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 1
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Análisis</h3>
-              <p className="text-gray-600 dark:text-gray-300">Entendemos tus necesidades y objetivos de negocio</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Análisis</h3>
+              <p className="text-gray-600">Entendemos tus necesidades y objetivos de negocio</p>
             </div>
             
             <div className="text-center">
-              <div className="bg-blue-600 dark:bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 2
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Diseño</h3>
-              <p className="text-gray-600 dark:text-gray-300">Creamos wireframes y diseños adaptados a tu marca</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Diseño</h3>
+              <p className="text-gray-600">Creamos wireframes y diseños adaptados a tu marca</p>
             </div>
             
             <div className="text-center">
-              <div className="bg-blue-600 dark:bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 3
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Desarrollo</h3>
-              <p className="text-gray-600 dark:text-gray-300">Programamos tu sitio web con las mejores tecnologías</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Desarrollo</h3>
+              <p className="text-gray-600">Programamos tu sitio web con las mejores tecnologías</p>
             </div>
             
             <div className="text-center">
-              <div className="bg-blue-600 dark:bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 4
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Lanzamiento</h3>
-              <p className="text-gray-600 dark:text-gray-300">Ponemos tu sitio en línea y te brindamos soporte continuo</p>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Lanzamiento</h3>
+              <p className="text-gray-600">Ponemos tu sitio en línea y te brindamos soporte continuo</p>
             </div>
           </div>
         </div>
