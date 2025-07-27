@@ -207,6 +207,11 @@ export default function Catalogo() {
     ? projects 
     : projects.filter(project => project.category === activeFilter)
 
+  const handleFilterChange = (filterId: string) => {
+    setActiveFilter(filterId)
+    // Don't scroll to top, let user see the filtered results
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 pt-16">
       <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800 text-white py-24 overflow-hidden">
@@ -256,16 +261,24 @@ export default function Catalogo() {
             {categories.map((category, index) => (
               <button
                 key={category.id}
-                onClick={() => setActiveFilter(category.id)}
-                className={`px-6 py-4 rounded-full font-medium transition-all duration-300 transform hover:scale-105 animate-on-scroll flex items-center ${
+                onClick={() => handleFilterChange(category.id)}
+                className={`px-6 py-4 rounded-full font-medium transition-all duration-300 transform hover:scale-105 flex items-center shadow-lg ${
                   activeFilter === category.id
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-xl'
-                    : 'bg-white text-gray-700 hover:bg-blue-50 shadow-lg border border-gray-200'
+                    ? 'bg-blue-600 text-white border-2 border-blue-600'
+                    : 'bg-white text-gray-700 hover:bg-blue-50 border-2 border-gray-200 hover:border-blue-300'
                 }`}
-                style={{animationDelay: `${index * 0.1}s`}}
+                style={{
+                  animationDelay: `${index * 0.1}s`,
+                  opacity: 1,
+                  visibility: 'visible'
+                }}
               >
-                {category.icon}
-                <span className="ml-2">{category.name} ({category.count})</span>
+                <span className="flex items-center">
+                  {category.icon}
+                </span>
+                <span className="ml-2 font-semibold">
+                  {category.name} ({category.count})
+                </span>
               </button>
             ))}
           </div>
@@ -274,10 +287,12 @@ export default function Catalogo() {
             {filteredProjects.map((project, index) => (
               <div
                 key={project.id}
-                className={`animate-on-scroll transition-all duration-500 ${
-                  activeFilter !== 'todos' ? 'animate-bounce-in' : ''
-                }`}
-                style={{animationDelay: `${index * 0.15}s`}}
+                className="transition-all duration-500"
+                style={{
+                  animationDelay: `${index * 0.15}s`,
+                  opacity: 1,
+                  visibility: 'visible'
+                }}
               >
                 <Card
                   title={project.title}

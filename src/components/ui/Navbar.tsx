@@ -17,8 +17,13 @@ export default function Navbar() {
   const handleNavClick = (hash: string) => {
     if (hash === 'home') {
       window.location.hash = ''
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     } else {
       window.location.hash = hash
+      // Small delay to ensure navigation happens first
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }, 100)
     }
     setIsOpen(false)
   }
