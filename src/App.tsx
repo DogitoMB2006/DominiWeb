@@ -3,7 +3,6 @@ import Navbar from './components/ui/Navbar'
 import Footer from './components/ui/Footer'
 import Home from './pages/Home'
 import Catalogo from './pages/Catalogo'
-import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -30,13 +29,11 @@ function App() {
   }
 
   return (
-    <ThemeProvider>
-      <div className="App">
-        <Navbar />
-        {renderPage()}
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="App">
+      <Navbar />
+      {renderPage()}
+      <Footer />
+    </div>
   )
 }
 
