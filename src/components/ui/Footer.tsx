@@ -101,8 +101,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-gray-300 font-medium">WhatsApp</p>
-                  <a href="tel:+18291234567" className="text-green-300 hover:text-green-200 transition-colors">
-                    +1 (829) 123-4567
+                  <a href="tel:+18299933257" className="text-green-300 hover:text-green-200 transition-colors">
+                    +1 (829) 993-3257
                   </a>
                 </div>
               </div>
@@ -138,7 +138,7 @@ export default function Footer() {
                 <span className="ml-2 text-yellow-400">✨</span>
               </p>
               <p className="text-gray-500 text-xs mt-1">
-                Desarrollado con ❤️ en República Dominicana
+                Desarrollado con ❤️ en República Dominicana, Esta pagina esta en beta version, todo lo que esta aqui no es el producto final, Jesus Reyes
               </p>
             </div>
             

@@ -304,7 +304,7 @@ export default function Home() {
             </button>
             <button className="border-2 border-white hover:bg-white hover:text-blue-600 px-10 py-5 rounded-xl text-lg font-bold transition-all duration-300 transform hover:scale-110 backdrop-blur-sm bg-white/10 flex items-center justify-center">
               <Phone className="w-6 h-6 mr-2" />
-              +1 (829) 123-4567
+              +1 (829) 993-3257
             </button>
           </div>
         </div>
@@ -340,7 +340,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-800 mb-2">Teléfono</h3>
-                    <p className="text-gray-600 text-lg">+1 (829) 123-4567</p>
+                    <p className="text-gray-600 text-lg">+1 (829) 993- 3257</p>
                   </div>
                 </div>
                 
@@ -402,7 +402,7 @@ export default function Home() {
                       <input 
                         type="tel" 
                         className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" 
-                        placeholder="(829) 123-4567"
+                        placeholder="(829) 993-3257"
                       />
                     </div>
                   </div>
